@@ -1,3 +1,9 @@
 
-.fl.hand.nosel.uzr.uhtml[n="#.."]{background: linear-gradient(to left, #c31432, #240b36)!important;color: white!important}
-    
+.fl.hand.nosel.uzr.uhtml[n="#.."] {
+    background: linear-gradient(to left, #c31432, #240b36)!important;
+    color: white!important;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    width: 86px;
+}    

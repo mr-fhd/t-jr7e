@@ -75,11 +75,11 @@ margin-left: 9px;
 var l_itv=setInterval(function(){
     if(myid!=null){
         clearInterval(l_itv);
-        $("#users .uzr:contains('#‏‏')").addClass('fhd1');
+        $("#users .uzr:contains('#••')").addClass('fhd1');
         $("#users .uzr.fhd1 .c-flex.fr").append('<img class="My_star2" title="توثيق" src="https://h.top4top.io/p_2442c44gj5.png">');
-        $("#users .uzr span.u-topic:contains('#‏‏')").after('<img id="mymood" class="My_mood2" title="مزاجي" src="https://g.top4top.io/p_2443n9tfx9.png">'); 
-        $("#users .uzr span.u-topic:contains('#‏‏')").after('<img id="mydrink" class="my_drink2" title="مشروبي" src="https://h.top4top.io/p_2443a8y3c2.png">');
-        $("#users .uzr span.u-topic:contains('#‏‏')").after('<img id="mystory" class="My_vedio2" title="ستوري" src="https://i.ibb.co/47VS4nY/image.png">');
+        $("#users .uzr span.u-topic:contains('#••')").after('<img id="mymood" class="My_mood2" title="مزاجي" src="https://g.top4top.io/p_2443n9tfx9.png">'); 
+        $("#users .uzr span.u-topic:contains('#••')").after('<img id="mydrink" class="my_drink2" title="مشروبي" src="https://h.top4top.io/p_2443a8y3c2.png">');
+        $("#users .uzr span.u-topic:contains('#••')").after('<img id="mystory" class="My_vedio2" title="ستوري" src="https://i.ibb.co/47VS4nY/image.png">');
     
         $("#users .uzr.fhd1 span.uhash, #users .uzr.fhd1 img.co").hide(); 
 
@@ -88,7 +88,7 @@ var l_itv=setInterval(function(){
         
         
         
-        $("div#users .uzr:contains('#‏‏') .My_vedio2").click(function(){
+        $("div#users .uzr:contains('#••') .My_vedio2").click(function(){
         $("#movon").show();
         
         $('#movon').addClass('fhd1');

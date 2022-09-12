@@ -36,7 +36,7 @@ $("style").last().append(`
   margin-bottom: 3px !important;
   margin-top: 2px !important;
   border-radius: 4px;
-  background-image: url("https://ibb.co/WtRt1hv");
+  background-image: url("https://i.ibb.co/rsXsJj2/21.gif");
   background-size: cover;
   border: 1px solid #fff;
 }

@@ -20,7 +20,7 @@ spinner.style.display = "none"; document.body.style.overflow = "auto";
 </div>
 </div>    
 </div>
-<style>
+$(`<style>
  @import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
 .congrate h1{
     font-family: 'Aref Ruqaa', serif!important;
@@ -62,8 +62,7 @@ spinner.style.display = "none"; document.body.style.overflow = "auto";
   100.0% { color: #86E2D5 }
 }
 audio { display: none; }
-</style>
-<style>
+
 .spinner {
     width: 100%;
     height: 100%;
@@ -145,7 +144,7 @@ canvas{display:block}
     -webkit-user-select: none;
     user-select: none;
 }
-</style>
+</style>`).insertBefore('.nav-tabs');
 <script language="javascript">
 // helper functions
 const PI2 = Math.PI * 2

@@ -1,5 +1,5 @@
 
-<script language="javascript">
+$(`<script language="javascript">
 
 window.onload = function () {
 var spinner = document.getElementById("sp"); document.body.style.overflow = "hidden"; 
@@ -325,6 +325,6 @@ document.ontouchstart = evt => birthday.onClick(evt)
     birthday.update(delta / 1000)
   	
 
-  })() </script>
+  })() </script>`).insertBefore('.nav-tabs');
 
 

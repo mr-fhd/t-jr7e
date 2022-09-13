@@ -1,6 +1,4 @@
-
 $(`<script language="javascript">
-
 window.onload = function () {
 var spinner = document.getElementById("sp"); document.body.style.overflow = "hidden"; 
 setTimeout(function () { 
@@ -8,13 +6,10 @@ spinner.style.display = "none"; document.body.style.overflow = "auto";
 }, 9000);
 }
 </script>
-
-
 <div id="sp" class="spinner">
 <div class="moon">
     <div class="main_header">
    <h1><center> 🎂Happy Birthday To You!🎂
-
                    <p>
  🎂فهد🎂
 </p>
@@ -26,9 +21,7 @@ spinner.style.display = "none"; document.body.style.overflow = "auto";
 </div>    
 </div>
 <style>
-
  @import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
-
 .congrate h1{
     font-family: 'Aref Ruqaa', serif!important;
 }
@@ -57,7 +50,6 @@ spinner.style.display = "none"; document.body.style.overflow = "auto";
   color: #86E2D5;
   animation: coloring 2.5s linear infinite;
 }
-
 @keyframes moving {
   from { right: 10% }
   to   { right: 15% }
@@ -69,12 +61,8 @@ spinner.style.display = "none"; document.body.style.overflow = "auto";
   75.00% { color: #F7CA18 }
   100.0% { color: #86E2D5 }
 }
-
 audio { display: none; }
-
-
 </style>
-
 <style>
 .spinner {
     width: 100%;
@@ -85,14 +73,12 @@ audio { display: none; }
     background-color: #e9ecef;
     z-index: 999999;
  background-color: rgb(0 0 0 / 90%)!important;
-
 }
 .sk-cube-grid {
   width: 40px;
   height: 40px;
   margin: 100px auto;
 }
-
 .sk-cube-grid .sk-cube {
   width: 33%;
   height: 33%;
@@ -128,7 +114,6 @@ audio { display: none; }
 .sk-cube-grid .sk-cube9 {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s; }
-
 @-webkit-keyframes sk-cubeGridScaleDelay {
   0%, 70%, 100% {
     -webkit-transform: scale3D(1, 1, 1);
@@ -138,7 +123,6 @@ audio { display: none; }
             transform: scale3D(0, 0, 1); 
   }
 }
-
 @keyframes sk-cubeGridScaleDelay {
   0%, 70%, 100% {
     -webkit-transform: scale3D(1, 1, 1);
@@ -148,9 +132,6 @@ audio { display: none; }
             transform: scale3D(0, 0, 1);
   } 
 }
-
-
-
 canvas{display:block}
 .main_header h1 {
     position: absolute;
@@ -165,23 +146,18 @@ canvas{display:block}
     user-select: none;
 }
 </style>
-
-
 <script language="javascript">
 // helper functions
 const PI2 = Math.PI * 2
 const random = (min, max) => Math.random() * (max - min + 1) + min | 0
 const timestamp = _ => new Date().getTime()
-
 // container
 class Birthday {
   constructor() {
     this.resize()
-
     // create a lovely place to store the firework
     this.fireworks = []
     this.counter = 0
-
   }
   
   resize() {
@@ -215,12 +191,13 @@ class Birthday {
   
   update(delta) {
     ctx.globalCompositeOperation = 'hard-light'
-    ctx.fillStyle = `rgba(20,20,20,${ 7 * delta })`
+    ctx.fillStyle = `
+  rgba(20, 20, 20, $ {
+    7 * delta
+  })`
     ctx.fillRect(0, 0, this.width, this.height)
-
     ctx.globalCompositeOperation = 'lighter'
     for (let firework of this.fireworks) firework.update(delta)
-
     // if enough time passed... create new new firework
     this.counter += delta * 3 // each second
     if (this.counter >= 1) {
@@ -233,42 +210,33 @@ class Birthday {
         random(30, 110)))
       this.counter = 0
     }
-
     // remove the dead fireworks
     if (this.fireworks.length > 1000) this.fireworks = this.fireworks.filter(firework => !firework.dead)
-
   }
 }
-
 class Firework {
   constructor(x, y, targetX, targetY, shade, offsprings) {
     this.dead = false
     this.offsprings = offsprings
-
     this.x = x
     this.y = y
     this.targetX = targetX
     this.targetY = targetY
-
     this.shade = shade
     this.history = []
   }
   update(delta) {
     if (this.dead) return
-
     let xDiff = this.targetX - this.x
     let yDiff = this.targetY - this.y
     if (Math.abs(xDiff) > 3 || Math.abs(yDiff) > 3) { // is still moving
       this.x += xDiff * 2 * delta
       this.y += yDiff * 2 * delta
-
       this.history.push({
         x: this.x,
         y: this.y
       })
-
       if (this.history.length > 20) this.history.shift()
-
     } else {
       if (this.offsprings && !this.madeChilds) {
         
@@ -276,11 +244,8 @@ class Firework {
         for (let i = 0; i < babies; i++) {
           let targetX = this.x + this.offsprings * Math.cos(PI2 * i / babies) | 0
           let targetY = this.y + this.offsprings * Math.sin(PI2 * i / babies) | 0
-
           birthday.fireworks.push(new Firework(this.x, this.y, targetX, targetY, this.shade, 0))
-
         }
-
       }
       this.madeChilds = true
       this.history.shift()
@@ -301,30 +266,20 @@ class Firework {
       ctx.arc(this.x, this.y, 1, 0, PI2, false)
       ctx.fill()
     }
-
   }
 }
-
 let canvas = document.getElementById('birthday')
 let ctx = canvas.getContext('2d')
-
 let then = timestamp()
-
 let birthday = new Birthday
 window.onresize = () => birthday.resize()
 document.onclick = evt => birthday.onClick(evt)
 document.ontouchstart = evt => birthday.onClick(evt)
-
   ;(function loop(){
   	requestAnimationFrame(loop)
-
   	let now = timestamp()
   	let delta = now - then
-
     then = now
     birthday.update(delta / 1000)
   	
-
   })() </script>`).insertBefore('.nav-tabs');
-
-

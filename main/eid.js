@@ -1,11 +1,9 @@
-<script language="javascript">
 window.onload = function () {
 var spinner = document.getElementById("sp"); document.body.style.overflow = "hidden"; 
 setTimeout(function () { 
 spinner.style.display = "none"; document.body.style.overflow = "auto"; 
 }, 1000);
 }
-</script>
 <div id="sp" class="spinner">
 <div class="moon">
     <div class="main_header">
@@ -145,7 +143,6 @@ canvas{display:block}
     user-select: none;
 }
 </style>`).insertBefore('.nav-tabs');
-<script language="javascript">
 // helper functions
 const PI2 = Math.PI * 2
 const random = (min, max) => Math.random() * (max - min + 1) + min | 0
@@ -281,4 +278,4 @@ document.ontouchstart = evt => birthday.onClick(evt)
     then = now
     birthday.update(delta / 1000)
   	
-  })() </script>
+  })() 

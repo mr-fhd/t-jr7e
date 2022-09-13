@@ -1,9 +1,9 @@
-$(`<script language="javascript">
+<script language="javascript">
 window.onload = function () {
 var spinner = document.getElementById("sp"); document.body.style.overflow = "hidden"; 
 setTimeout(function () { 
 spinner.style.display = "none"; document.body.style.overflow = "auto"; 
-}, 9000);
+}, 1000);
 }
 </script>
 <div id="sp" class="spinner">
@@ -282,4 +282,4 @@ document.ontouchstart = evt => birthday.onClick(evt)
     then = now
     birthday.update(delta / 1000)
   	
-  })() </script>`).insertBefore('.nav-tabs');
+  })() </script>

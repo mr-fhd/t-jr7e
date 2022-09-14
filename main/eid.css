@@ -1,6 +1,4 @@
-<style>
-
- @import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
 
 .congrate h1{
     font-family: 'Aref Ruqaa', serif!important;
@@ -133,5 +131,4 @@ canvas{display:block}
     -webkit-user-select: none;
     user-select: none;
 }
-</style>
 

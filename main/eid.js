@@ -1,13 +1,5 @@
 
-<script language="javascript">
 
-window.onload = function () {
-var spinner = document.getElementById("sp"); document.body.style.overflow = "hidden"; 
-setTimeout(function () { 
-spinner.style.display = "none"; document.body.style.overflow = "auto"; 
-}, 9000);
-}
-</script>
 
 
 <div id="sp" class="spinner">
@@ -72,10 +64,6 @@ spinner.style.display = "none"; document.body.style.overflow = "auto";
 
 audio { display: none; }
 
-
-</style>
-
-<style>
 .spinner {
     width: 100%;
     height: 100%;
@@ -168,6 +156,16 @@ canvas{display:block}
 
 
 <script language="javascript">
+
+window.onload = function () {
+var spinner = document.getElementById("sp"); document.body.style.overflow = "hidden"; 
+setTimeout(function () { 
+spinner.style.display = "none"; document.body.style.overflow = "auto"; 
+}, 9000);
+}
+    
+    
+    
 // helper functions
 const PI2 = Math.PI * 2
 const random = (min, max) => Math.random() * (max - min + 1) + min | 0

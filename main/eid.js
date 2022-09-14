@@ -1,25 +1,4 @@
 
-
-
-
-<div id="sp" class="spinner">
-<div class="moon">
-    <div class="main_header">
-   <h1><center> 🎂Happy Birthday To You!🎂
-
-                   <p>
- 🎂اسم الشخص عيد ميلاد سعيد 21🎂
-</p>
-<iframe width="" height="" src="رابط المقطع?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center></h1>
-<canvas id="birthday"></canvas>
-    
-</div>
-</div>    
-</div>
-
-<script language="javascript">
-
 window.onload = function () {
 var spinner = document.getElementById("sp"); document.body.style.overflow = "hidden"; 
 setTimeout(function () { 
@@ -186,4 +165,4 @@ document.ontouchstart = evt => birthday.onClick(evt)
     birthday.update(delta / 1000)
   	
 
-  })() </script>
+  })() 
